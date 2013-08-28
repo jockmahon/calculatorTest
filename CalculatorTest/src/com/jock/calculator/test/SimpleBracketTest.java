@@ -6,8 +6,8 @@ import android.widget.EditText;
 
 import com.jock.calculator.MainActivity;
 
-public class SimpleBracketTest extends
-		ActivityInstrumentationTestCase2<MainActivity> {
+public class SimpleBracketTest extends ActivityInstrumentationTestCase2<MainActivity>
+{
 
 	private MainActivity mActivity;
 
@@ -23,48 +23,45 @@ public class SimpleBracketTest extends
 	private Button btn_clr;
 	private EditText cal_et;
 
+
 	@SuppressWarnings("deprecation")
-	public SimpleBracketTest() {
-		super("com.jock.calculator", MainActivity.class);
+	public SimpleBracketTest()
+	{
+		super( "com.jock.calculator", MainActivity.class );
 	}
 
+
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception
+	{
 		super.setUp();
 
-		setActivityInitialTouchMode(false);
+		setActivityInitialTouchMode( false );
 
 		mActivity = getActivity();
 
-		btn_2 = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.two_btn);
-		btn_3 = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.three_btn);
-		btn_5 = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.five_btn);
-		btn_6 = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.six_btn);
-		btn_plus = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.plus_btn);
-		btn_mult = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.mult_btn);
-		btn_equals = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.equals_btn);
-		btn_leftB = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.leftBracket_btn);
-		btn_rightB = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.rightBracket_btn);
-		btn_clr = (Button) mActivity
-				.findViewById(com.jock.calculator.R.id.clr_btn);
-		cal_et = (EditText) mActivity
-				.findViewById(com.jock.calculator.R.id.editText);
+		btn_2 = (Button) mActivity.findViewById( com.jock.calculator.R.id.two_btn );
+		btn_3 = (Button) mActivity.findViewById( com.jock.calculator.R.id.three_btn );
+		btn_5 = (Button) mActivity.findViewById( com.jock.calculator.R.id.five_btn );
+		btn_6 = (Button) mActivity.findViewById( com.jock.calculator.R.id.six_btn );
+		btn_plus = (Button) mActivity.findViewById( com.jock.calculator.R.id.plus_btn );
+		btn_mult = (Button) mActivity.findViewById( com.jock.calculator.R.id.mult_btn );
+		btn_equals = (Button) mActivity.findViewById( com.jock.calculator.R.id.equals_btn );
+		btn_leftB = (Button) mActivity.findViewById( com.jock.calculator.R.id.leftBracket_btn );
+		btn_rightB = (Button) mActivity.findViewById( com.jock.calculator.R.id.rightBracket_btn );
+		btn_clr = (Button) mActivity.findViewById( com.jock.calculator.R.id.clr_btn );
+		cal_et = (EditText) mActivity.findViewById( com.jock.calculator.R.id.editText );
 
 	}
 
-	public void testCalUI() {
+
+	public void testCalUI()
+	{
 		// 5+(3+2)
-		mActivity.runOnUiThread(new Runnable() {
-			public void run() {
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
 
 				btn_5.performClick();
 				btn_plus.performClick();
@@ -76,18 +73,23 @@ public class SimpleBracketTest extends
 				btn_equals.performClick();
 
 			}
-		});
+		} );
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		assertTrue(cal_et.getText().toString().trim().equals("10"));
+		assertTrue( cal_et.getText().toString().trim().equals( "10" ) );
 
 		// 5+(5*2+6)
-		mActivity.runOnUiThread(new Runnable() {
-			public void run() {
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
 				btn_clr.performClick();
 				btn_5.performClick();
 				btn_plus.performClick();
@@ -101,18 +103,23 @@ public class SimpleBracketTest extends
 				btn_equals.performClick();
 
 			}
-		});
+		} );
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		assertTrue(cal_et.getText().toString().trim().equals("21"));
+		assertTrue( cal_et.getText().toString().trim().equals( "21" ) );
 
 		// 5+(6+5*2)
-		mActivity.runOnUiThread(new Runnable() {
-			public void run() {
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
 				btn_clr.performClick();
 				btn_5.performClick();
 				btn_plus.performClick();
@@ -126,18 +133,23 @@ public class SimpleBracketTest extends
 				btn_equals.performClick();
 
 			}
-		});
+		} );
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		assertTrue(cal_et.getText().toString().trim().equals("21"));
+		assertTrue( cal_et.getText().toString().trim().equals( "21" ) );
 
 		// 5+(5*2*6)
-		mActivity.runOnUiThread(new Runnable() {
-			public void run() {
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
 				btn_clr.performClick();
 				btn_5.performClick();
 				btn_plus.performClick();
@@ -151,18 +163,23 @@ public class SimpleBracketTest extends
 				btn_equals.performClick();
 
 			}
-		});
+		} );
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		assertTrue(cal_et.getText().toString().trim().equals("65"));
+		assertTrue( cal_et.getText().toString().trim().equals( "65" ) );
 
 		// 5+(5*2
-		mActivity.runOnUiThread(new Runnable() {
-			public void run() {
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
 				btn_clr.performClick();
 				btn_5.performClick();
 				btn_plus.performClick();
@@ -173,13 +190,16 @@ public class SimpleBracketTest extends
 				btn_equals.performClick();
 
 			}
-		});
+		} );
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		assertTrue(cal_et.getText().toString().trim().equals("15"));
+		assertTrue( cal_et.getText().toString().trim().equals( "15" ) );
 	}
 }
