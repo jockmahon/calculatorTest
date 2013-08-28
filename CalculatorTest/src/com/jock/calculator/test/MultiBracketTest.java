@@ -9,6 +9,7 @@ import com.jock.calculator.MainActivity;
 public class MultiBracketTest extends ActivityInstrumentationTestCase2<MainActivity>
 {
 
+	
 	private MainActivity mActivity;
 
 	private Button btn_1;
