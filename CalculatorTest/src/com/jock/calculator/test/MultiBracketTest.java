@@ -12,17 +12,11 @@ public class MultiBracketTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	private MainActivity mActivity;
 
-	private Button btn_1;
+	
 	private Button btn_2;
 	private Button btn_3;
-	private Button btn_4;
 	private Button btn_5;
-	private Button btn_6;
-	private Button btn_7;
-	private Button btn_8;
-	private Button btn_9;
 	private Button btn_plus;
-	private Button btn_mult;
 	private Button btn_equals;
 	private Button btn_leftB;
 	private Button btn_rightB;
@@ -30,6 +24,7 @@ public class MultiBracketTest extends ActivityInstrumentationTestCase2<MainActiv
 	private EditText cal_et;
 
 
+	@SuppressWarnings("deprecation")
 	public MultiBracketTest()
 	{
 		super( "com.jock.calculator", MainActivity.class );
@@ -45,17 +40,10 @@ public class MultiBracketTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		mActivity = getActivity();
 
-		btn_1 = (Button) mActivity.findViewById( com.jock.calculator.R.id.one_btn );
 		btn_2 = (Button) mActivity.findViewById( com.jock.calculator.R.id.two_btn );
 		btn_3 = (Button) mActivity.findViewById( com.jock.calculator.R.id.three_btn );
-		btn_4 = (Button) mActivity.findViewById( com.jock.calculator.R.id.four_btn );
 		btn_5 = (Button) mActivity.findViewById( com.jock.calculator.R.id.five_btn );
-		btn_6 = (Button) mActivity.findViewById( com.jock.calculator.R.id.six_btn );
-		btn_7 = (Button) mActivity.findViewById( com.jock.calculator.R.id.seven_btn );
-		btn_8 = (Button) mActivity.findViewById( com.jock.calculator.R.id.eight_btn );
-		btn_9 = (Button) mActivity.findViewById( com.jock.calculator.R.id.nine_btn );
 		btn_plus = (Button) mActivity.findViewById( com.jock.calculator.R.id.plus_btn );
-		btn_mult = (Button) mActivity.findViewById( com.jock.calculator.R.id.mult_btn );
 		btn_equals = (Button) mActivity.findViewById( com.jock.calculator.R.id.equals_btn );
 		btn_leftB = (Button) mActivity.findViewById( com.jock.calculator.R.id.leftBracket_btn );
 		btn_rightB = (Button) mActivity.findViewById( com.jock.calculator.R.id.rightBracket_btn );
