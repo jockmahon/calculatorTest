@@ -22,6 +22,7 @@ public class SimpleAddTest extends ActivityInstrumentationTestCase2<MainActivity
 	private EditText cal_et;
 
 
+	@SuppressWarnings("deprecation")
 	public SimpleAddTest()
 	{
 		super( "com.jock.calculator", MainActivity.class );
