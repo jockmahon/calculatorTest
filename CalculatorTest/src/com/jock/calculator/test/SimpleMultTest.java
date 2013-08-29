@@ -21,6 +21,7 @@ public class SimpleMultTest extends ActivityInstrumentationTestCase2<MainActivit
 	private EditText cal_et;
 
 
+	@SuppressWarnings("deprecation")
 	public SimpleMultTest()
 	{
 		super( "com.jock.calculator", MainActivity.class );
