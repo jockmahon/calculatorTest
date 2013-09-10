@@ -76,11 +76,11 @@ public class SimpleMissingOpTest extends ActivityInstrumentationTestCase2<MainAc
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_plus.performClick();
 				btn_5.performClick();
 				btn_equals.performClick();
-
+	
 			}
 		} );
 
@@ -100,7 +100,7 @@ public class SimpleMissingOpTest extends ActivityInstrumentationTestCase2<MainAc
 			public void run()
 			{
 
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_minus.performClick();
 				btn_equals.performClick();
@@ -123,7 +123,7 @@ public class SimpleMissingOpTest extends ActivityInstrumentationTestCase2<MainAc
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_minus.performClick();
 				btn_5.performClick();
 				btn_equals.performClick();
@@ -139,14 +139,14 @@ public class SimpleMissingOpTest extends ActivityInstrumentationTestCase2<MainAc
 		{
 			e.printStackTrace();
 		}
-		assertTrue( cal_et.getText().toString().trim().equals( "-5" ) );
+		assertTrue( cal_et.getText().toString().trim().equals( "5" ) );
 
 		// 5/
 		mActivity.runOnUiThread( new Runnable()
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_divide.performClick();
 				btn_equals.performClick();
@@ -169,7 +169,7 @@ public class SimpleMissingOpTest extends ActivityInstrumentationTestCase2<MainAc
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_divide.performClick();
 				btn_5.performClick();
 				btn_equals.performClick();
@@ -185,7 +185,7 @@ public class SimpleMissingOpTest extends ActivityInstrumentationTestCase2<MainAc
 		{
 			e.printStackTrace();
 		}
-		assertTrue( cal_et.getText().toString().trim().equals( "0" ) );
+		assertTrue( cal_et.getText().toString().trim().equals( "5" ) );
 
 	}
 }

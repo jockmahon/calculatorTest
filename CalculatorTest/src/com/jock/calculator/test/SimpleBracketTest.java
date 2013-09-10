@@ -90,7 +90,7 @@ public class SimpleBracketTest extends ActivityInstrumentationTestCase2<MainActi
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_plus.performClick();
 				btn_leftB.performClick();
@@ -120,7 +120,7 @@ public class SimpleBracketTest extends ActivityInstrumentationTestCase2<MainActi
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_plus.performClick();
 				btn_leftB.performClick();
@@ -150,7 +150,7 @@ public class SimpleBracketTest extends ActivityInstrumentationTestCase2<MainActi
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_plus.performClick();
 				btn_leftB.performClick();
@@ -180,7 +180,7 @@ public class SimpleBracketTest extends ActivityInstrumentationTestCase2<MainActi
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_plus.performClick();
 				btn_leftB.performClick();

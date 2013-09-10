@@ -81,7 +81,7 @@ public class SimpleMultTest extends ActivityInstrumentationTestCase2<MainActivit
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_2.performClick();
 				btn_mult.performClick();
 				btn_2.performClick();

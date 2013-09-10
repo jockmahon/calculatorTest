@@ -79,7 +79,7 @@ public class SimpleAddTest extends ActivityInstrumentationTestCase2<MainActivity
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_2.performClick();
 				btn_plus.performClick();
 				btn_equals.performClick();
@@ -103,7 +103,7 @@ public class SimpleAddTest extends ActivityInstrumentationTestCase2<MainActivity
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_1.performClick();
 				btn_plus.performClick();
 				btn_2.performClick();
@@ -128,7 +128,7 @@ public class SimpleAddTest extends ActivityInstrumentationTestCase2<MainActivity
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_2.performClick();
 				btn_plus.performClick();
 				btn_1.performClick();

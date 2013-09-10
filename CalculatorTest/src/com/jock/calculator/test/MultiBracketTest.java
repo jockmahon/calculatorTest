@@ -90,7 +90,7 @@ public class MultiBracketTest extends ActivityInstrumentationTestCase2<MainActiv
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				btn_clr.performLongClick();
 				btn_leftB.performClick();
 				btn_5.performClick();
 				btn_plus.performClick();
@@ -121,7 +121,7 @@ public class MultiBracketTest extends ActivityInstrumentationTestCase2<MainActiv
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_leftB.performClick();
 				btn_5.performClick();
 				btn_plus.performClick();

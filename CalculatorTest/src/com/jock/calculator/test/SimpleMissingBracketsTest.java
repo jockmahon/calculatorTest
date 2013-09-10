@@ -89,7 +89,7 @@ public class SimpleMissingBracketsTest extends ActivityInstrumentationTestCase2<
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_3.performClick();
 				btn_plus.performClick();
 				btn_2.performClick();
@@ -115,7 +115,7 @@ public class SimpleMissingBracketsTest extends ActivityInstrumentationTestCase2<
 		{
 			public void run()
 			{
-				btn_clr.performClick();
+				mActivity.reset();
 				btn_5.performClick();
 				btn_plus.performClick();
 				btn_leftB.performClick();
