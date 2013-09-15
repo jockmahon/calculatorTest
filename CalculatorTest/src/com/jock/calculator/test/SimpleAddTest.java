@@ -51,6 +51,50 @@ public class SimpleAddTest extends ActivityInstrumentationTestCase2<MainActivity
 	public void testCalUI()
 	{
 
+		// 2
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
+				mActivity.reset();
+				btn_2.performClick();
+				btn_equals.performClick();
+
+			}
+		} );
+
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+		Log.d( "MOOSE", cal_et.getText().toString().trim() + " = 2" );
+		assertTrue( cal_et.getText().toString().trim().equals( "2" ) );
+
+		// +
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
+				mActivity.reset();
+				btn_equals.performClick();
+			}
+		} );
+
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+		Log.d( "MOOSE", cal_et.getText().toString().trim() + " " );
+		assertTrue( cal_et.getText().toString().trim().equals( "" ) );
+
 		// +2
 		mActivity.runOnUiThread( new Runnable()
 		{

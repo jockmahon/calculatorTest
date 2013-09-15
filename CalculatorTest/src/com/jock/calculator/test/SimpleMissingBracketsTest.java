@@ -1,6 +1,7 @@
 package com.jock.calculator.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -59,21 +60,72 @@ public class SimpleMissingBracketsTest extends ActivityInstrumentationTestCase2<
 
 	public void testCalUI()
 	{
-		// (5+3
+		// 5  (
 		mActivity.runOnUiThread( new Runnable()
 		{
 			public void run()
 			{
-				btn_leftB.performClick();
+				mActivity.reset();
 				btn_5.performClick();
-				btn_plus.performClick();
-				btn_3.performClick();
+				btn_leftB.performClick();
 
 				btn_equals.performClick();
 
 			}
 		} );
 
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+		assertTrue( cal_et.getText().toString().trim().equals( "5" ) );
+
+		// 5 + (
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
+				mActivity.reset();
+				btn_5.performClick();
+				btn_plus.performClick();
+				btn_leftB.performClick();
+				
+				btn_equals.performClick();
+				
+			}
+		} );
+		
+		try
+		{
+			Thread.sleep( 1000 );
+		}
+		catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+		Log.d( "MOOSE", cal_et.getText().toString().trim() );
+		assertTrue( cal_et.getText().toString().trim().equals( "5" ) );
+
+		// (5+3
+		mActivity.runOnUiThread( new Runnable()
+		{
+			public void run()
+			{
+				mActivity.reset();
+				btn_leftB.performClick();
+				btn_5.performClick();
+				btn_plus.performClick();
+				btn_3.performClick();
+				
+				btn_equals.performClick();
+				
+			}
+		} );
+		
 		try
 		{
 			Thread.sleep( 1000 );
